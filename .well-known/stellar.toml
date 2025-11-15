@@ -1,0 +1,61 @@
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+ACCOUNTS="GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC"
+VERSION="2.0.0"
+
+[DOCUMENTATION]
+ORG_NAME="CoinLedger"
+ORG_DBA="Clean, professional, Web3-aligned"
+ORG_URL="https://www.coinledger.sbs"
+ORG_LOGO="https://www.coinledger.sbs/coinledger-org-logo.png"
+ORG_DESCRIPTION="CoinLedger – Your Gateway to Transparent Web3 Finance"
+ORG_OFFICIAL_EMAIL="support@coinledger.sbs"
+
+[[CURRENCIES]]
+code="CoinLedger"
+issuer="GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC"
+display_decimals=7
+name="CoinLedger"
+desc="CoinLedger is the fastest and easiest crypto tax calculator"
+conditions="One-click access to manage assets on Stellar Blockchain 🌌"
+image="https://www.coinledger.sbs/images/CoinLedger.png"
+fixed_number=100000000000
+
+[[CURRENCIES]]
+code="CEO"
+issuer="GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC"
+display_decimals=7
+name="CEO"
+desc="A chief executive officer (CEO), also known as a chief executive or managing director, is the top-ranking corporate officer charged with the management of an organization, usually a company or a nonprofit organization."
+conditions="One-click access to manage assets on Stellar Blockchain 🌌"
+image="https://www.coinledger.sbs/images/CEO.png"
+fixed_number=100000000000
+
+[[CURRENCIES]]
+code="DeFi"
+issuer="GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC"
+display_decimals=7
+name="DeFi"
+desc="Track your wallet's crypto assets across blockchains, audit token smart contracts, access the best swap rates in web3 and more."
+conditions="One-click access to manage assets on Stellar Blockchain 🌌"
+image="https://www.coinledger.sbs/images/DeFi.png"
+fixed_number=100000000000
+
+[[CURRENCIES]]
+code="NFTs"
+issuer="GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC"
+display_decimals=7
+name="NFTs"
+desc="NFTs, or non-fungible tokens, are unique digital assets that represent ownership of digital items. Unlike traditional digital files, NFTs are secured by blockchain technology, making them tamper-proof and verifiable. This provides a new way to establish ownership and authenticity in the digital world."
+conditions="One-click access to manage assets on Stellar Blockchain 🌌"
+image="https://www.coinledger.sbs/images/NFTs.png"
+fixed_number=100000000000
+
+[[CURRENCIES]]
+code="Web3"
+issuer="GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC"
+display_decimals=7
+name="Web3"
+desc="Web3 is an idea for a new iteration of the World Wide Web which incorporates concepts such as decentralization, blockchain technologies, tokenomics, and privacy-enhancing technologies. This is distinct from Tim Berners-Lee's concept of the Semantic Web."
+conditions="One-click access to manage assets on Stellar Blockchain 🌌"
+image="https://www.coinledger.sbs/images/Web3.png"
+fixed_number=100000000000
