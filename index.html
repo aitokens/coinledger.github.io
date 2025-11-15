@@ -4,110 +4,179 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CoinLedger – Transparent Web3 Finance</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <style>
-    /* Soft, Safe Dark Theme */
-    :root {
-      --bg: #0f0f12;
-      --card-bg: #1a1a1f;
-      --text: #e6e6ff;
-      --accent: #6c5ce7; /* Soft purple accent */
-      --btn-hover: #5649c0;
-      --border: #2a2a32;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', system-ui, sans-serif;
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: linear-gradient(135deg, #0b0b14, #12121f);
+      color: #e0e0ff;
+      font-family: 'Inter', sans-serif;
       min-height: 100vh;
-      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 40px;
     }
 
-    .container {
+    .header {
       text-align: center;
-      max-width: 600px;
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 40px 30px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      border: 1px solid var(--border);
+      margin-bottom: 50px;
+      max-width: 700px;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 24px;
-      font-weight: 600;
-      line-height: 1.4;
+    .logo {
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #8a7cfb, #5e4ae9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 12px;
     }
 
-    p {
-      font-size: 1rem;
+    .tagline {
+      font-size: 1.15rem;
+      font-weight: 400;
       opacity: 0.85;
-      margin-bottom: 32px;
       line-height: 1.6;
     }
 
+    .tokens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 50px;
+    }
+
+    .token-card {
+      background: rgba(20, 20, 35, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(80, 70, 140, 0.3);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .token-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(108, 92, 231, 0.6);
+    }
+
+    .token-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #7d6ae6, #5a48d9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .token-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .token-id {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      font-family: monospace;
+      word-break: break-all;
+    }
+
+    .btn-container {
+      margin: 20px 0 40px;
+    }
+
     .btn {
-      background: var(--accent);
+      background: linear-gradient(90deg, #6c5ce7, #5a48d9);
       color: white;
       border: none;
-      padding: 14px 32px;
+      padding: 14px 38px;
       font-size: 1.05rem;
       font-weight: 600;
       border-radius: 12px;
       cursor: pointer;
-      transition: all 0.25s ease;
+      transition: opacity 0.25s ease, transform 0.2s ease;
       text-decoration: none;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
+      box-shadow: 0 6px 20px rgba(108, 92, 231, 0.35);
     }
 
     .btn:hover {
-      background: var(--btn-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(108, 92, 231, 0.35);
-    }
-
-    .btn:active {
-      transform: translateY(0);
+      opacity: 0.92;
+      transform: scale(1.03);
     }
 
     .issuer {
-      margin-top: 28px;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       opacity: 0.6;
-      word-break: break-all;
+      text-align: center;
+      max-width: 700px;
+      line-height: 1.6;
+      font-family: monospace;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .logo { font-size: 2.2rem; }
+      .tagline { font-size: 1rem; }
+      .token-name { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>CoinLedger</h1>
-    <p>Your Gateway to Transparent Web3 Finance</p>
-    
-    <a href="https://stellarterm.com/" target="_blank" rel="noopener noreferrer" class="btn">
-      Open in StellarTerm
-    </a>
+  <div class="header">
+    <div class="logo">CoinLedger</div>
+    <p class="tagline">Your Gateway to Transparent Web3 Finance</p>
+  </div>
 
-    <div class="issuer">
-      Issued by: GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC
+  <div class="tokens-grid">
+    <div class="token-card">
+      <div class="token-icon">👑</div>
+      <div class="token-name">CEO</div>
+      <div class="token-id">GCI6…ZSBC</div>
+    </div>
+    <div class="token-card">
+      <div class="token-icon">🏦</div>
+      <div class="token-name">DeFi</div>
+      <div class="token-id">GCI6…ZSBC</div>
+    </div>
+    <div class="token-card">
+      <div class="token-icon">🖼️</div>
+      <div class="token-name">NFTs</div>
+      <div class="token-id">GCI6…ZSBC</div>
+    </div>
+    <div class="token-card">
+      <div class="token-icon">🌐</div>
+      <div class="token-name">Web3</div>
+      <div class="token-id">GCI6…ZSBC</div>
     </div>
   </div>
 
+  <div class="btn-container">
+    <a href="https://stellarterm.com/markets/?search=coinledger.sbs" target="_blank" rel="noopener noreferrer" class="btn">
+      Open in StellarTerm
+    </a>
+  </div>
+
+  <div class="issuer">
+    All tokens issued by: GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC
+  </div>
+
   <script>
-    // Optional: Add subtle safety note on external link (if desired)
-    document.querySelector('.btn').addEventListener('click', () => {
-      // You could log, show confirmation, or enhance security here
-      console.log('Redirecting to StellarTerm — an external wallet interface.');
+    // Optional: smooth hover or analytics
+    document.querySelectorAll('.token-card').forEach(card => {
+      card.addEventListener('mouseenter', () => card.style.boxShadow = '0 8px 24px rgba(108, 92, 231, 0.25)');
+      card.addEventListener('mouseleave', () => card.style.boxShadow = 'none');
     });
   </script>
 </body>
