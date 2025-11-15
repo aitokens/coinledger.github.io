@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoinLedger – Transparent Web3 Finance</title>
+  <style>
+    /* Soft, Safe Dark Theme */
+    :root {
+      --bg: #0f0f12;
+      --card-bg: #1a1a1f;
+      --text: #e6e6ff;
+      --accent: #6c5ce7; /* Soft purple accent */
+      --btn-hover: #5649c0;
+      --border: #2a2a32;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(108, 92, 231, 0.35);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .issuer {
+      margin-top: 28px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CoinLedger</h1>
+    <p>Your Gateway to Transparent Web3 Finance</p>
+    
+    <a href="https://stellarterm.com/" target="_blank" rel="noopener noreferrer" class="btn">
+      Open in StellarTerm
+    </a>
+
+    <div class="issuer">
+      Issued by: GCI6OKQJZI5UKJWM6LEEFFDXKWY6ZQMJJ62ZN2NHQ6KNFKEVUMRYZSBC
+    </div>
+  </div>
+
+  <script>
+    // Optional: Add subtle safety note on external link (if desired)
+    document.querySelector('.btn').addEventListener('click', () => {
+      // You could log, show confirmation, or enhance security here
+      console.log('Redirecting to StellarTerm — an external wallet interface.');
+    });
+  </script>
+</body>
+</html>
